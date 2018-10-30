@@ -31,7 +31,7 @@ RUN pip install --no-cache-dir virtualenv && \
     /venv/bin/pip install uwsgi alerta alerta-server==$VERSION
 ENV PATH $PATH:/venv/bin
 
-ADD https://github.com/alerta/angular-alerta-webui/archive/master.tar.gz /tmp/web.tar.gz
+ADD https://github.com/jeanfav/angular-alerta-webui/archive/master.tar.gz /tmp/web.tar.gz
 RUN tar zxvf /tmp/web.tar.gz -C /tmp && \
     mv /tmp/angular-alerta-webui-master/app /web && \
     mv /web/config.js /web/config.js.orig
